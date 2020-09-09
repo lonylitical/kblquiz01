@@ -36,17 +36,17 @@ function display()
 
 function check(value)
 {
-  this.value=value;
-  return value;
+  var choice=this.value;
+  return choice;
 }
 
 function submit()
 {
   var i=0;
   var score=0;
-  while(i==0)
+  while(i== 0)
    {
-     answer=check(value);
+      var answer=check();
      if(answer == quest1.uttar)
       {
       score= 5;
