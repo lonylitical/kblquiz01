@@ -38,15 +38,16 @@ function display()
 function check()  
 {
  var choice=(prompt(" type your choice")) ;
- for(i=0;i==0;i++)
+ for(i=0;i == 0;i++)
  {
  
   if( choice == quest1.uttar )
-   {
+    {
     score= 5;
     res.innerHTML= "you win rs.5000" + " and your score= " + score;
     cong.innerHTML = "&#x1f600";
-   }
+    next2.style.display = "block";
+    }
    else    
    {
     score=0;
