@@ -32,21 +32,27 @@ function display()
   	btn3.innerHTML= quest1.options.c;
   	btn4.innerHTML= quest1.options.d;
     cong.innerHTML= "WE FEEL";
+    res.style.display = "block";
 }
 
 function check()  
 {
-  var choice=(prompt("choice")) ;
+ var choice=(prompt(" type your choice")) ;
+ for(i=0;i==0;i++)
+ {
+ 
   if( choice == quest1.uttar )
    {
     score= 5;
     res.innerHTML= "you win rs.5000" + " and your score= " + score;
     cong.innerHTML = "&#x1f600";
    }
-   else  
+   else    
    {
     score=0;
     res.innerHTML="oops! wrong answer" + " and your score= " + score;
     cong.innerHTML = "&#x1f61e";
    }
+   i++;
+ }
 }
