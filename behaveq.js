@@ -1,15 +1,14 @@
 const quest1=
-
-  {
-   prashn:'which is the hottest planet in our solar system?',
-   options: {
-              a:'a:mars',
-              b:'b:venus',
-              c:'c:mercury',
-              d:'d:saturn'
-            } ,
-    uttar:'b'
-  };
+{
+  prashn:'which is the hottest planet in our solar system?',
+  options: {
+    a:'a:mars',
+    b:'b:venus',
+    c:'c:mercury',
+    d:'d:saturn'
+  } ,
+  uttar:'b'
+};
 
 
 const dis=document.querySelector("#dis");
@@ -34,26 +33,27 @@ function display()
     cong.innerHTML= "WE FEEL";
     res.style.display = "block";
 }
-
+window.answered = 0;
 function check()  
 {
- var choice=(prompt(" type your choice")) ;
- for(i=0;i == 0;i++)
- {
- 
-  if( choice == quest1.uttar )
+  if (window.answered == 0)
+  {
+    var choice=(prompt(" type your choice"));
+    window.answered =1;
+    if( choice == quest1.uttar )
     {
-    score= 5;
-    res.innerHTML= "you win rs.5000" + " and your score= " + score;
-    cong.innerHTML = "&#x1f600";
-    next2.style.display = "block";
+      score= 5;
+      res.innerHTML= "you win rs.5" + " and your score= " + score;
+      cong.innerHTML = "&#x1f600";
+      next2.style.display = "block";
     }
-   else    
-   {
-    score=0;
-    res.innerHTML="oops! wrong answer" + " and your score= " + score;
-    cong.innerHTML = "&#x1f61e";
-   }
-   i++;
- }
+    else    
+    {
+      score=0;
+      res.innerHTML="oops! wrong answer" + " and your score= " + score;
+      cong.innerHTML = "&#x1f61e";
+    }
+  }
+
+ 
 }

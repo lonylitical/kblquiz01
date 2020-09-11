@@ -12,13 +12,13 @@
 	<meta name="viewport" content="width=device-width" initial-scale="1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>quitting the game</title>
-	<style type="text/css">
+	<style>
 		body
           { 
             min-height: 95vh;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             background: #008080;
             color:#334;
             font-family: 'calibri','sans-serif';
@@ -33,16 +33,31 @@
 <body>
      <div> <h1>THANKS! FOR PARTICIPATING  </h1></div>
      <br>
+     <br>
       <div><h2> we hope you had fun!  </h2></div>
+      <br>
       <br>
       <div><h1>  HAVE A NICE DAY! &#x1f600 </h1></div>
       <br>
+      <div>
+        <a href="home.html" id="home" style="display: none;">go to home and see your scores</a>
+      </div>
+      <br>
 </body>
-<script type="text/javascript">
-	var confirm=prompt("Are you sure, you want to quit?");
-	//if(confirm=="yes")
-		//quit.html exit();
-		//else
-			//back;
+<script>
+const home=document.querySelector('#home');
+var say= prompt("Are you sure, you want to quit?");
+  if( say == "yes")
+    {
+    home.style.display="block";
+    }
+  elseif(say == "no")
+    {
+    window.history.back(-1);
+    }
+  else
+    {
+    window.location.href("home.html"); 
+    }
 </script>
 </html>
