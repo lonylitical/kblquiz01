@@ -1,12 +1,12 @@
 const quest1=
 
   {
-   prashn:'Agar koi baccha Narendra Modi jaisa banna chahta hai to wo kya banna chahta hai?',
+   prashn:'which is the hottest planet in our solar system?',
    options: {
-              a:'writer',
-              b:'polititian',
-              c:'Actor',
-              d:'player'
+              a:'a:mars',
+              b:'b:venus',
+              c:'c:mercury',
+              d:'d:saturn'
             } ,
     uttar:'b'
   };
@@ -34,31 +34,19 @@ function display()
     cong.innerHTML= "WE FEEL";
 }
 
-function check(value)
+function check()  
 {
-  var choice=this.value;
-  return choice;
-}
-
-function submit()
-{
-  var i=0;
-  var score=0;
-  while(i== 0)
+  var choice=(prompt("choice")) ;
+  if( choice == quest1.uttar )
    {
-      var answer=check();
-     if(answer == quest1.uttar)
-      {
-      score= 5;
-      res.innerHTML= "you win rs.5000" + " and you score " + score;
-      cong.innerHTML = "&#x1f600";
-      }
-     else  
-      {
-      score=0;
-      res.innerHTML="oops! wrong answer" + " and you score " + score;
-      cong.innerHTML = "&#x1f61e";
-      }
-     i++;
+    score= 5;
+    res.innerHTML= "you win rs.5000" + " and your score= " + score;
+    cong.innerHTML = "&#x1f600";
+   }
+   else  
+   {
+    score=0;
+    res.innerHTML="oops! wrong answer" + " and your score= " + score;
+    cong.innerHTML = "&#x1f61e";
    }
 }
