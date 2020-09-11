@@ -54,6 +54,4 @@ function check()
       cong.innerHTML = "&#x1f61e";
     }
   }
-
- 
 }

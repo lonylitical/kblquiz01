@@ -16,7 +16,6 @@
 		body
           { 
             min-height: 95vh;
-            display: flex;
             align-items: center;
             justify-content: space-between;
             background: #008080;
@@ -31,33 +30,24 @@
 </head>
 
 <body>
+     <br>
      <div> <h1>THANKS! FOR PARTICIPATING  </h1></div>
-     <br>
-     <br>
+     <hr>
       <div><h2> we hope you had fun!  </h2></div>
+      <hr>
+       <div><h1>  HAVE A NICE DAY! &#x1f600 </h1></div>
+      <hr>
       <br>
+      <div><a href="next1.html" style="color: black;text-decoration-line: none;background-color: green;font-size: 30px" >go to the first page</a></div>
       <br>
-      <div><h1>  HAVE A NICE DAY! &#x1f600 </h1></div>
+      <hr>
       <br>
       <div>
-        <a href="home.html" id="home" style="display: none;">go to home and see your scores</a>
+        <a href="home.html" style="color: black;background-color: green;font-size: 30px; text-decoration-line: none;">go to home and see your scores</a>
       </div>
       <br>
+      <hr>
+      <br>
+      <div><button  style="color: black;background-color: green;font-size: 30px" onclick="window.history.back(-1);">go back</button></div>
 </body>
-<script>
-const home=document.querySelector('#home');
-var say= prompt("Are you sure, you want to quit?");
-  if( say == "yes")
-    {
-    home.style.display="block";
-    }
-  elseif(say == "no")
-    {
-    window.history.back(-1);
-    }
-  else
-    {
-    window.location.href("home.html"); 
-    }
-</script>
 </html>
